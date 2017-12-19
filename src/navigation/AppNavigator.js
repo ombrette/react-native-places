@@ -6,8 +6,11 @@ import {
   TabNavigator
 } from "react-navigation";
 
+import Footer from "../features/places/components/Footer";
+
 import Home from "../features/home";
 import Places from "../features/places";
+import Filters from "../features/filters";
 import Around from "../features/around";
 import Friends from "../features/friends";
 
@@ -46,9 +49,7 @@ const Drawer = DrawerNavigator(
   {
     drawerPosition: "right",
     contentComponent: props => (
-      <View>
-        <Text {...props}>Hello Drawer</Text>
-      </View>
+      <Filters />
     )
   }
 );

@@ -12,16 +12,18 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   selected: {
-    color: "#98b9f7",
-    backgroundColor: "transparent",
+    color: "#98b9f7"
   },
   text: {
-    color: "#000",
+    paddingVertical: 2,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: "#CCC"
   }
 });
 
 const Filter = props => (
-  <Button large title={props.label} onPress={props.onPress} buttonStyle={{backgroundColor: 'transparent'}} textStyle={props.selected ? [styles.selected] : styles.text} />
+  <Button title={props.label} onPress={props.onPress} textStyle={props.selected ? [styles.selected, styles.text] : styles.text}/>
 );
 
 const Footer = props => (
